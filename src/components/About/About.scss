@@ -1,0 +1,94 @@
+@import "../../css-config/mixins.scss";
+.about-page{
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 10px;
+    padding-top: 50px;
+    h1{
+        font-size: 40px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            bottom: -17px;
+            left: 0;
+            background-color: #76b4f9;
+        }
+    }
+    
+    .about-content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin: 10px 0;
+
+        .about-single-content{
+            margin: 20px 0;
+            max-width: 350px;
+            .first-title-and-img{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                max-width: 350px;
+                margin: 10px 0;
+                font-size: 30px;
+                
+                @include mxSm{
+                    font-size: 25px;
+                }
+                .first-img-container{
+                    width: 50px;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .first-summary-content{
+                font-size: 20px;
+                line-height: 1.2;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            .title-and-img{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                max-width: 350px;
+                margin: -30px 0;
+                font-size: 25px;
+                @include mxSm{
+                    font-size: 20px;
+                }
+                .img-container{
+                    width: 45px;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .summary-content{
+                font-size: 18px;
+                line-height: 1.2;
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+    .team-info{
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        
+        span{
+            font-weight: 700;
+            font-size: 18px;
+            color: coral;
+        }
+    }
+
+}

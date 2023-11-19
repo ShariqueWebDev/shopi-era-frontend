@@ -1,0 +1,27 @@
+@import "../../../css-config/mixins.scss";
+
+.shop-by-category{
+    margin: 20px;
+    .categories{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+        .category{
+            margin: 10px;
+            max-width: 270px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            img{
+                border-radius: 10px;
+                width: 100%;
+                transition: all 0.3s ease-in;
+            }
+            img:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+}

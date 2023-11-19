@@ -1,0 +1,55 @@
+@import "../../css-config/mixins.scss";
+
+.success-page-container {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .success-page-content{
+        width: 500px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 10px;
+        @include mxSml{
+            width: 350px;
+        }
+        .thanks-msg{
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .order-msg{
+            font-weight: 500;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            margin-top: 3px;
+        }
+        .visit-msg{
+            margin-top: 8px;
+            font-size: 15px;
+        }
+        .email-container{
+            text-decoration: underline;
+            margin-top: 5px;
+        }
+        .shopping-btn{
+            margin-top: 10px;
+            .link-tag{
+                color: black;
+                font-weight: 500;
+                text-decoration: none;
+            }
+        }
+    } 
+
+}
+
+@keyframes increaseScale{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

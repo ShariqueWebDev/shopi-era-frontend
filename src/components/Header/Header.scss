@@ -1,0 +1,120 @@
+@import "../../css-config/mixins.scss";
+
+.main-header {
+    width: 100%;
+    padding: 0 20px;
+    background-color: #212121;
+    color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    transition: all 0.3s ease;
+    @include md{
+        padding: 0 40px;
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include md{
+            height: 80px;
+        }
+
+        .left {
+            display: none;
+            list-style: none;
+            gap: 25px;
+            @include md{
+                display: flex;
+            }
+            
+            li {
+                    .link-tag{
+                        color: white;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                
+            }
+        }
+
+        .center {
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            @include md{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 34px;
+                .link{
+                    list-style: none;
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+            .link{
+                list-style: none;
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include md {
+                gap: 25px;
+            }
+            svg{
+                cursor: pointer;
+                font-size: 20px;
+                @include md{
+                    font-size: 24px;
+                }
+            }
+            .cart-icon {
+                position: relative;
+
+                span {
+                    min-width: 20px;
+                    position: absolute;
+                    background-color: #fa9167;
+                    text-align: center;
+                    padding: 2px;
+                    top: -4px;
+                    right: -15px;
+                    font-size: 12px;
+                    border-radius: 10px;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    &.sticky-header{
+        // position: sticky;
+        top: -100px;
+        transition: all 0.3s ease;
+        // transform: translateY(-80px);
+        // animation: stickyHeader 0.3s ease forwards;
+    }
+}
+
+@keyframes stickyHeader {
+    0%{
+        transform: translateY(-80px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
