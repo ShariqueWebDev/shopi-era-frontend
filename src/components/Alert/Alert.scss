@@ -8,10 +8,11 @@
     color: white;
     // border: 1px solid black;
     right: 10px;
-    padding: 8px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
     z-index: 100;
     @include mxSml{
         width: 100%;
+        bottom: 0;
     }
 
     .content{

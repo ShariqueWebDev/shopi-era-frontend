@@ -18,8 +18,12 @@
       font-size: 40px;
       cursor: pointer;
       z-index: 10;
+      &:hover{
+        color: rgb(56, 51, 51);
+      }
       @include mxSm {
-        display: none;
+        
+        font-size: 32px;
       }
     }
 

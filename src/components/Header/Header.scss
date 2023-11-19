@@ -73,8 +73,20 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            @include md {
-                gap: 25px;
+            margin-right: 80px;
+            @include mxSml {
+                gap: 15px;
+                margin-right: 50px;
+            }
+            .mobile-tag{
+                display: none;
+                list-style: none;
+                text-decoration: none;
+                color: white;
+                font-weight: 500;
+                @include mxSm {
+                    display: block;
+                }
             }
             svg{
                 cursor: pointer;

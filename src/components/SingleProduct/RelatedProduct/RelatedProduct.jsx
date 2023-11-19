@@ -45,15 +45,8 @@ const RelatedProduct = ({ productId, categoryId }) => {
 
   return (
     <div className="carousel-container" >
-      <>
-      {filterDataProd?.length > 4 &&
-      <div className="">
-        
-        <BsFillArrowLeftCircleFill className="carouselLeftNav arrow" onClick={()=>{navigationCarousel("left")}}/>
+      <BsFillArrowLeftCircleFill className="carouselLeftNav arrow" onClick={()=>{navigationCarousel("left")}}/>
         <BsFillArrowRightCircleFill className="carouselRightNav arrow" onClick={()=>{navigationCarousel("right")}}/>
-        </div>
-        }  
-      </>
       <h1>Related Product</h1>
       <div className="related-product-container" ref={carouselContainer}>
           {filterDataProd?.map((item) => {

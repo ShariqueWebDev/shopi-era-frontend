@@ -4,13 +4,14 @@ import { TbSearch } from "react-icons/tb"
 import { CgShoppingCart } from "react-icons/cg"
 import { AiOutlineHeart } from "react-icons/ai"
 import {Link} from "react-router-dom"
-
 import Search from "./Search/Search"
 import { Context } from "../../utils/context"
+import { useNavigate } from "react-router-dom"
 
 const Header = () => {
 
-    const {showCart, setShowCart, setShowSearch, cartItem} = useContext(Context)
+    const {showCart, setShowCart, setShowSearch, cartItem} = useContext(Context);
+    const navigate = useNavigate();
 
     const [lastScroll, setLastScroll] = useState(0);
     const [scrollEvent, setScrollEvent] = useState(false);
@@ -45,6 +46,8 @@ const Header = () => {
                     </ul>
                     <div className="center" ><Link className="link" to={"/"}>ShopiMart</Link></div>
                     <div className="right">
+                        <li className="mobile-tag" onClick={()=>{navigate("/about")}}> About</li>
+
                         <TbSearch onClick={()=>{setShowSearch(true)}} />
                         <AiOutlineHeart />
                         <span className="cart-icon" onClick={()=>{setShowCart(true); console.log("cart funtion invoked");}}>
